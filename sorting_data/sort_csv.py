@@ -6,7 +6,8 @@ print(df.shape)
 df = df.dropna()
 print(df.shape)
 ticks = ["AAPL", "AMZN", "GOOG", "TSLA", "NVDA"]
-mask = df['stock'].isin(ticks)
+ticks_apple = ["AAPL"]
+mask = df['stock'].isin(ticks_apple)
 
 df_filtered = df[mask]
 
@@ -36,4 +37,4 @@ def convert_date(input_date):
 df_filtered['converted_date'] = df_filtered['date'].apply(lambda x: convert_date(x))
 
 df_filtered.to_csv(r"data\analyst_ratings_processed_filtered.csv", index=False)
-print(df.head())
+print(df_filtered.head())
