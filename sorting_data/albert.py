@@ -14,7 +14,6 @@ def query(payload):
 	return response.json()
 	
 output = query({
-	"inputs": "Quarter result were amazing for Tesla will expect growth",
-})
+	"inputs": "Quarter result were amazing for Tesla will expect growth",})
 
 print(output)
