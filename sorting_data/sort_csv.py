@@ -2,9 +2,9 @@ import pandas as pd
 import re
 
 df = pd.read_csv(r"no_sync\analyst_ratings_processed.csv")
-df.shape
+print(df.shape)
 df = df.dropna()
-df.shape
+print(df.shape)
 ticks = ["AAPL", "AMZN", "GOOG", "TSLA", "NVDA"]
 mask = df['stock'].isin(ticks)
 
