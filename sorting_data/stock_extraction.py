@@ -28,4 +28,4 @@ print(f"Mean Daily Return: {mean_daily_return}")
 
 # Calculate the standard deviation of daily returns
 std_daily_return = stock_data['Daily_Return'].std()
-print(f"Standard Deviation of Daily Returns: {std_daily_return}")
+print(f"Standard Deviation of Daily Returns: {std_daily_return}")   
