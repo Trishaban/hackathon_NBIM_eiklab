@@ -1,7 +1,7 @@
 import requests
 import time
 
-with open(r'C:\Source\EikLab\hackathon_NBIM_eiklab\no_sync\albert_api.txt') as f:
+with open(r'/no_sync/albert_api.txt') as f:
     API_TOKEN = f.readlines()[0]
     
 API_URL = "https://api-inference.huggingface.co/models/ProsusAI/finbert"
