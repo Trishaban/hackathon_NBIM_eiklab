@@ -10,11 +10,6 @@ mask = df['stock'].isin(ticks)
 
 df_filtered = df[mask]
 
-df_filtered.to_csv(r"data\analyst_ratings_processed_filtered.csv", index=False)
-
-print(df_filtered.shape)
-
-
 def convert_date(input_date):
     try:
         # Create a regular expression pattern to match the input date format
@@ -38,6 +33,7 @@ def convert_date(input_date):
         pass
 
 # Apply the function to each row in the date column and create a new column
-df['converted_date'] = df['date'].apply(lambda x: convert_date(x))
+df_filtered['converted_date'] = df_filtered['date'].apply(lambda x: convert_date(x))
 
+df_filtered.to_csv(r"data\analyst_ratings_processed_filtered.csv", index=False)
 print(df.head())
